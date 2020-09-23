@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Project 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+    "website": "/",
+    "repository": "/",
+    "technologies": [
+      "Tech",
+      "Tech"
+    ],
+    "thumbnail": "./data/project1.png"
+  },
+  {
+    "name": "Project 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur.",
+    "website": "/",
+    "repository": "/",
+    "technologies": [
+      "Tech",
+      "Tech"
+    ],
+    "thumbnail": "./data/project2.png"
+  },
+  {
+    "name": "Project 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "website": "/",
+    "repository": "/",
+    "technologies": [
+      "Tech",
+      "Tech"
+    ],
+    "thumbnail": "./data/project3.png"
+  },
+  {
+    "name": "Project 4",
+    "description": "Lorem ipsum dolor sit amet.",
+    "website": "/",
+    "repository": "/",
+    "technologies": [
+      "Tech",
+      "Tech"
+    ],
+    "thumbnail": "./data/project4.png"
+  }
+]

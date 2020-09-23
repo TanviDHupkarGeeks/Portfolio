@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./data/favicon.ico">
+</head>
+
+<body>
+  <div id="show-header">
+    <div id="open">&equiv;</div>
+    <div id="close" class="hide"> &nequiv;</div>
+  </div>
+
+  <header id="header" style="z-index: 9999">
+    <h1 class="brand">
+      <a class="brand-link" href="#">
+        <span class="brand-link-1">jane</span><span class="brand-link-2"
+        style="color: rgba(0, 0, 0, 0.8)">doe</span>
+      </a>
+    </h1>
+
+    <nav class="menu">
+      <a class="menu-item" href="#portfolio">Portfolio</a>
+      <a class="menu-item" href="#contact">Contact</a>
+      <a class="menu-item" href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-section full" style="
+      background-image: url(https://i.imgur.com/xjQa4vL.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;">
+      <div style="
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          position: absolute;
+          z-index: 10;
+      "></div>
+      <section id="home" style="z-index: 999; color: rgb(240, 240, 240)" class="sub-section">
+        <div class="hero">
+          <h1 class="hero-title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a.
+          </h1>
+
+          <h2 class="hero-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit.
+          </h2>
+
+          <a href="#contact" style="background-color: rgba(240, 240, 240, 0.2)" class="hero-contact">Get in touch</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="main-section" style="
+      background-color: #f8e6b6;
+      display: grid;
+      align-items: center;">
+      <section id="about" class="sub-section">
+        <h1 class="sub-section-title">About me</h1>
+
+        <section class="content">
+          <section class="about-me">
+            <div class="about-photo" style="background-image: url(./data/photo.jpg)"></div>
+
+            <div class="about-texts">
+              <h3 class="about">
+                Hi! My name is Jane Doe and lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum dolor sit amet tincidunt maximus. Pellentesque sit amet tortor mauris.
+              </h3>
+
+              <div class="skills">
+                <i class="fab fa-react"></i>
+                <i class="fab fa-docker"></i>
+                <i class="fas fa-database"></i>
+                <i class="fab fa-node"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-python"></i>
+                <i class="fab fa-linux"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-php"></i>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="resume">
+            Check out my
+            <a href="#" target="_blank">Professional</a> and my
+            <a href="#" target="_blank">Academic</a> resume.
+          </h2>
+        </section>
+      </section>
+    </section>
+
+    <section class="main-section no-side-padding" style="background-color: #e4fde1">
+      <section id="portfolio" class="sub-section">
+        <h1 class="sub-section-title">Projects</h1>
+
+        <div id="cards"></div>
+      </section>
+    </section>
+
+      <div class="main-section-overlay" style="background-color: rgb(250, 250, 250)"></div>
+    <section class="main-section" style="background-color: rgb(250, 250, 250)">
+
+      <section id="contact" class="sub-section">
+        <h1 class="sub-section-title">Reach out</h1>
+
+        <section class="text">
+          If you wanna reach out, you can email me at <span class="bold">janedoe@contact.com</span> or send me a message on any of my social media.
+        </section>
+
+        <section id="media">
+          <a href="#" class="media-link" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="media-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="media-link" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="media-link" target="_blank">
+            <i class="fab fa-codepen"></i>
+          </a>
+        </section>
+      </section>
+    </section>
+
+  </main>
+</body>
+
+<script src="index.js"></script>
+<script>
+    let headers = document.querySelectorAll('.sub-section-header');
+    headers[0].style.display = 'none';
+    headers[1].style.background = '#f8e6b6';
+    headers[2].style.background = '#e4fde1';
+    headers[3].style.background = 'rgb(250, 250, 250)';
+</script>
+
+</html>

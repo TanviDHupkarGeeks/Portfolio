@@ -1,0 +1,426 @@
+main {
+  .main-section {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 2rem 5rem 2rem;
+
+    &.full {
+      min-height: 100vh;
+      padding-bottom: 0;
+      display: grid;
+    }
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .sub-section {
+      max-width: 1095px;
+      margin: 0 auto;
+
+      &-header {
+        height: 3rem;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 990;
+      }
+
+      &-title {
+        text-align: center;
+        font-weight: 100;
+        font-size: 40px;
+        margin: 0;
+        padding: 0.5rem 0 3rem 0;
+      }
+    }
+  }
+
+  #home {
+    align-self: center;
+  
+    .hero {
+      &-title,
+      &-subtitle {
+        font-weight: 300;
+        margin: 0;
+        @include short-transition;
+      }
+  
+      &-title {
+        font-size: 70px;
+      }
+  
+      &-subtitle {
+        font-size: 20px;
+        padding: 1rem 0;
+      }
+  
+      &-contact {
+        border: 1px solid $color1;
+        margin-top: 3rem;
+        display: inline-block;
+        padding: 1rem;
+        transition: 1s;
+
+        &:hover {
+          text-decoration: none;
+          background-color: $color1;
+          color: $color3;
+        }
+      }
+    }
+  }
+  
+  #portfolio {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+  
+    #cards {
+      justify-self: center;
+      display: grid;
+      grid-template-columns: repeat(2, min-content);
+      grid-template-rows: repeat(3, min-content);
+
+      $k: 980;
+      @for $i from 1 through 6 {
+        .card:nth-child(#{$i}) {
+          $k: $k - 1;
+          z-index: $k;
+        }
+      }
+  
+      .card {
+        width: auto;
+        height: auto;
+        position: relative;
+
+        &-overlay {
+          position: absolute;
+          left: -368px;
+          background-color: lighten($color: $color2, $amount: 12);
+          z-index: 985;
+          top: 0;
+          @include card-size;
+        }
+
+        .card-content {
+          .card-text,
+          .card-img {
+            display: block;
+            background-color: lighten($color: $color2, $amount: 13);
+            box-sizing: border-box;
+            transition: 1s;
+            @include card-size;
+          }
+
+          .card-img {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .card-text {
+            position: absolute;
+            top: 0;
+            left: -368px;
+            user-select: none;
+            display: grid;
+            grid-template-columns: auto min-content;
+            border: 1px solid $color2;
+            
+            .content {
+              display: grid;
+              grid-template-rows: min-content auto min-content;
+              padding: 1rem 2rem;
+              box-sizing: border-box;
+
+              .name {
+                margin: 0;
+                text-align: center;
+                font-weight: 400;
+              }
+
+              .description {
+                margin: 0;
+                font-weight: 100;
+                font-size: 14px;
+                align-self: center;
+                text-align: center;
+              }
+
+              .techs {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                min-width: 100%;
+                color: darken($color: $color2, $amount: 30);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                .tech {
+                  display: inline-block;
+                  padding: 0 1rem;
+                }
+              }
+            }
+
+            .external {
+              background-color: lighten($color: $color2, $amount: 10);
+              border-left: 1px solid $color2;
+              padding: 0 0.5rem;
+              display: grid;
+
+              .external-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                align-self: center;
+    
+                .item {
+                  font-size: 20px;
+                  padding: 0.2rem 0;
+    
+                  &-link {
+                    transition: 1s;
+                  }
+    
+                  .text {
+                    display: none;
+                  }
+    
+                  &:hover {
+                    z-index: 990;
+    
+                    .text {
+                      display: block;
+                      position: absolute;
+                      background-color: $color0;
+                      color: white;
+                      font-size: 15px;
+                      padding: 0.4rem;
+                      border: 1px solid $color2;
+                      margin-left: -3rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .card-text {
+              left: 0;
+              z-index: 980;
+            }
+
+            .card-img {
+              z-index: 970;
+            }
+          }
+        }
+      }
+
+      .gallery {
+        background-color: transparent;
+      }
+    }
+  }
+
+  #contact {
+    position: relative;
+
+    .text {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 100;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    #media {
+      text-align: center;
+      padding-top: 2rem;
+      font-size: 30px;
+
+      .media-link {
+        display: inline-block;
+        padding: 0 0.2rem;
+        @include short-transition;
+        @include hover-color;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  #about {
+    .content {
+      .about-me {
+        display: grid;
+        grid-template-columns: min-content auto;
+
+        .about-photo {
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 220px;
+          height: 220px;
+          margin-right: 4rem;
+        }
+
+        .about-texts {
+          align-self: center;
+          display: grid;
+
+          .about {
+            margin-top: 0;
+            font-weight: normal;
+            text-indent: 2rem;
+          }
+
+          .skills {
+            i {
+              color: $color1;
+              padding-right: 1rem;
+              font-size: 40px;
+            }
+          }
+        }
+      }
+
+      .resume {
+        text-align: center;
+        font-weight: 100;
+        margin: 0;
+        padding-top: 3rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    #home {
+      .hero {
+        &-title {
+          font-size: 55px;
+        }
+        
+        &-subtitle {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 777px) {
+  .sub-section-header {
+    background-color: transparent;
+  }
+
+  main {
+    .main-section {
+      &.no-side-padding {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    #home {
+      .hero {
+        &-title {
+          font-size: 48px;
+        }
+        
+        &-subtitle {
+          font-size: 16.5px;
+        }
+      }
+    }
+
+    #portfolio {
+      #cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #about {
+      .content {
+        .about-me {
+          display: grid;
+          grid-template-columns: 1fr;
+
+          .about-photo {
+            margin: 0 auto;
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  main {
+    #home {
+      .hero {
+        &-title {
+          font-size: 43px;
+        }
+        
+        &-subtitle {
+          font-size: 16px;
+        }
+      }
+    }
+
+    #contact {
+      .text {
+        font-size: 28px;
+      }
+    }
+
+    #about {
+      .content {
+        .about-me {
+          .about-texts {
+            .about {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  main {
+    #portfolio {
+      #cards {
+        .card {
+          &-overlay {
+            display: none;
+          }
+          
+          .card-content {
+            .card-text,
+            .card-img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

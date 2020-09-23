@@ -1,0 +1,380 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+body {
+  color: #474747;
+  margin: 0;
+  font-family: "Montserrat", sans-serif; }
+
+a {
+  color: #ff6600;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.bg-light {
+  background-color: #fefefe; }
+
+.bg-dark {
+  background-color: #f2f1f1; }
+
+.bold {
+  font-weight: bold; }
+
+.hide {
+  display: none; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff6600; }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #b34700; }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; }
+
+#show-header {
+  display: none;
+  user-select: none; }
+
+#header {
+  top: 0;
+  width: 100%;
+  background: transparent;
+  display: grid;
+  padding: 0 5rem;
+  position: fixed;
+  box-sizing: border-box;
+  grid-template-columns: min-content auto;
+  z-index: 999;
+  transition: 1s; }
+  #header.header-shadow {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  #header .brand,
+  #header .menu {
+    margin: auto 0;
+    font-weight: 100;
+    padding: 0.6rem 0; }
+  #header .brand {
+    font-size: 1.5rem; }
+    #header .brand-link-1 {
+      color: #ff6600; }
+    #header .brand-link-2 {
+      color: #474747; }
+    #header .brand-link:hover {
+      font-weight: 500;
+      text-decoration: none; }
+  #header .menu {
+    font-size: 1rem;
+    text-align: end;
+    font-weight: 400; }
+    #header .menu-item {
+      padding: 0.8rem; }
+      #header .menu-item:hover {
+        text-decoration: none;
+        font-weight: bold; }
+
+@media only screen and (max-width: 777px) {
+  #show-header {
+    right: 1.5rem;
+    top: 1rem;
+    position: fixed;
+    z-index: 1000;
+    display: block;
+    transition: 1s;
+    border: 1px solid #ff6600;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem 0.3rem 0.5rem;
+    color: #fefefe;
+    background-color: #ff6600; }
+    #show-header:hover {
+      border: 1px solid #cc5200;
+      background-color: #cc5200; }
+  #header {
+    width: auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    right: -10rem;
+    background-color: #fefefe;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+    #header .brand {
+      position: absolute;
+      font-size: 16px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      bottom: 0rem; }
+    #header .menu {
+      text-align: center; }
+      #header .menu-item {
+        font-weight: 100;
+        display: block;
+        padding: 0.7rem 0;
+        margin: 0;
+        font-size: 24px; }
+        #header .menu-item:hover {
+          font-weight: normal; } }
+
+main .main-section {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 2rem 5rem 2rem; }
+  main .main-section.full {
+    min-height: 100vh;
+    padding-bottom: 0;
+    display: grid; }
+  main .main-section-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  main .main-section .sub-section {
+    max-width: 1095px;
+    margin: 0 auto; }
+    main .main-section .sub-section-header {
+      height: 3rem;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 990; }
+    main .main-section .sub-section-title {
+      text-align: center;
+      font-weight: 100;
+      font-size: 40px;
+      margin: 0;
+      padding: 0.5rem 0 3rem 0; }
+
+main #home {
+  align-self: center; }
+  main #home .hero-title, main #home .hero-subtitle {
+    font-weight: 300;
+    margin: 0;
+    transition: 1s; }
+  main #home .hero-title {
+    font-size: 70px; }
+  main #home .hero-subtitle {
+    font-size: 20px;
+    padding: 1rem 0; }
+  main #home .hero-contact {
+    border: 1px solid #ff6600;
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem;
+    transition: 1s; }
+    main #home .hero-contact:hover {
+      text-decoration: none;
+      background-color: #ff6600;
+      color: #fefefe; }
+
+main #portfolio {
+  display: grid;
+  grid-template-rows: repeat(2, min-content); }
+  main #portfolio #cards {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content); }
+    main #portfolio #cards .card:nth-child(1) {
+      z-index: 979; }
+    main #portfolio #cards .card:nth-child(2) {
+      z-index: 978; }
+    main #portfolio #cards .card:nth-child(3) {
+      z-index: 977; }
+    main #portfolio #cards .card:nth-child(4) {
+      z-index: 976; }
+    main #portfolio #cards .card:nth-child(5) {
+      z-index: 975; }
+    main #portfolio #cards .card:nth-child(6) {
+      z-index: 974; }
+    main #portfolio #cards .card {
+      width: auto;
+      height: auto;
+      position: relative; }
+      main #portfolio #cards .card-overlay {
+        position: absolute;
+        left: -368px;
+        background-color: #f2f1f1;
+        z-index: 985;
+        top: 0;
+        width: 368px;
+        height: 207px; }
+      main #portfolio #cards .card .card-content .card-text,
+      main #portfolio #cards .card .card-content .card-img {
+        display: block;
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        transition: 1s;
+        width: 368px;
+        height: 207px; }
+      main #portfolio #cards .card .card-content .card-img {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      main #portfolio #cards .card .card-content .card-text {
+        position: absolute;
+        top: 0;
+        left: -368px;
+        user-select: none;
+        display: grid;
+        grid-template-columns: auto min-content;
+        border: 1px solid #d4d2d2; }
+        main #portfolio #cards .card .card-content .card-text .content {
+          display: grid;
+          grid-template-rows: min-content auto min-content;
+          padding: 1rem 2rem;
+          box-sizing: border-box; }
+          main #portfolio #cards .card .card-content .card-text .content .name {
+            margin: 0;
+            text-align: center;
+            font-weight: 400; }
+          main #portfolio #cards .card .card-content .card-text .content .description {
+            margin: 0;
+            font-weight: 100;
+            font-size: 14px;
+            align-self: center;
+            text-align: center; }
+          main #portfolio #cards .card .card-content .card-text .content .techs {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            min-width: 100%;
+            color: #898484;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+            main #portfolio #cards .card .card-content .card-text .content .techs .tech {
+              display: inline-block;
+              padding: 0 1rem; }
+        main #portfolio #cards .card .card-content .card-text .external {
+          background-color: #edecec;
+          border-left: 1px solid #d4d2d2;
+          padding: 0 0.5rem;
+          display: grid; }
+          main #portfolio #cards .card .card-content .card-text .external .external-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-self: center; }
+            main #portfolio #cards .card .card-content .card-text .external .external-list .item {
+              font-size: 20px;
+              padding: 0.2rem 0; }
+              main #portfolio #cards .card .card-content .card-text .external .external-list .item-link {
+                transition: 1s; }
+              main #portfolio #cards .card .card-content .card-text .external .external-list .item .text {
+                display: none; }
+              main #portfolio #cards .card .card-content .card-text .external .external-list .item:hover {
+                z-index: 990; }
+                main #portfolio #cards .card .card-content .card-text .external .external-list .item:hover .text {
+                  display: block;
+                  position: absolute;
+                  background-color: #474747;
+                  color: white;
+                  font-size: 15px;
+                  padding: 0.4rem;
+                  border: 1px solid #d4d2d2;
+                  margin-left: -3rem; }
+      main #portfolio #cards .card .card-content:hover .card-text {
+        left: 0;
+        z-index: 980; }
+      main #portfolio #cards .card .card-content:hover .card-img {
+        z-index: 970; }
+    main #portfolio #cards .gallery {
+      background-color: transparent; }
+
+main #contact {
+  position: relative; }
+  main #contact .text {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    word-wrap: break-word; }
+  main #contact #media {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 30px; }
+    main #contact #media .media-link {
+      display: inline-block;
+      padding: 0 0.2rem;
+      transition: 1s;
+      color: #ff6600; }
+      main #contact #media .media-link:hover {
+        color: #b34700; }
+      main #contact #media .media-link:hover {
+        text-decoration: none; }
+
+main #about .content .about-me {
+  display: grid;
+  grid-template-columns: min-content auto; }
+  main #about .content .about-me .about-photo {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 220px;
+    margin-right: 4rem; }
+  main #about .content .about-me .about-texts {
+    align-self: center;
+    display: grid; }
+    main #about .content .about-me .about-texts .about {
+      margin-top: 0;
+      font-weight: normal;
+      text-indent: 2rem; }
+    main #about .content .about-me .about-texts .skills i {
+      color: #ff6600;
+      padding-right: 1rem;
+      font-size: 40px; }
+
+main #about .content .resume {
+  text-align: center;
+  font-weight: 100;
+  margin: 0;
+  padding-top: 3rem; }
+
+@media only screen and (max-width: 1000px) {
+  main #home .hero-title {
+    font-size: 55px; }
+  main #home .hero-subtitle {
+    font-size: 18px; } }
+
+@media only screen and (max-width: 777px) {
+  .sub-section-header {
+    background-color: transparent; }
+  main .main-section.no-side-padding {
+    padding-right: 0;
+    padding-left: 0; }
+  main #home .hero-title {
+    font-size: 48px; }
+  main #home .hero-subtitle {
+    font-size: 16.5px; }
+  main #portfolio #cards {
+    grid-template-columns: 1fr; }
+  main #about .content .about-me {
+    display: grid;
+    grid-template-columns: 1fr; }
+    main #about .content .about-me .about-photo {
+      margin: 0 auto;
+      margin-bottom: 3rem; } }
+
+@media only screen and (max-width: 470px) {
+  main #home .hero-title {
+    font-size: 43px; }
+  main #home .hero-subtitle {
+    font-size: 16px; }
+  main #contact .text {
+    font-size: 28px; }
+  main #about .content .about-me .about-texts .about {
+    text-align: center; } }
+
+@media only screen and (max-width: 370px) {
+  main #portfolio #cards .card-overlay {
+    display: none; }
+  main #portfolio #cards .card .card-content .card-text,
+  main #portfolio #cards .card .card-content .card-img {
+    width: 100%; } }

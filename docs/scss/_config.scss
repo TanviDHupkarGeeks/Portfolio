@@ -1,0 +1,75 @@
+$color0: #474747;
+$color1: rgba(255, 102, 0,8);
+$color2: #d4d2d2;
+$color3: #fefefe;
+$color4: #f2f1f1;
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $color0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: $color1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.bg-light {
+  background-color: $color3;
+}
+
+.bg-dark {
+  background-color: $color4;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+@mixin card-size {
+  width: 368px;
+  height: 207px;  
+}
+
+@mixin hover-background {
+  background-color: $color1;
+
+  &:hover {
+    background-color: darken($color: $color1, $amount: 15);
+  }
+}
+
+@mixin hover-color {
+  color: $color1;
+
+  &:hover {
+    color: darken($color: $color1, $amount: 15);
+  }
+}
+
+@mixin short-transition {
+  transition: 1s;
+}
+
+::-webkit-scrollbar-thumb {
+	@include hover-background;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+	height: 7px;
+}

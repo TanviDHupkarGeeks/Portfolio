@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o . --recursive"
+  },
+  "keywords": [
+    "portfolio",
+    "javascript",
+    "json",
+    "sass"
+  ],
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
